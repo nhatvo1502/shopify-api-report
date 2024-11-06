@@ -74,7 +74,7 @@ The ODBC Driver is a universal driver that will help connect our AWS DynamoDB Ta
 ![alt text](<images/7-accesskey.png>)
 4. Note this down for `Step 8`
 
-### 7. Download and configure CDATA Amazon DynamoDB ODBC Driver
+### 8. Download and configure CDATA Amazon DynamoDB ODBC Driver
 1. Navigate to https://www.cdata.com/odbc/#drivers
 2. Search "dynamodb"
 ![alt text](<images/odbc1.png>)
@@ -84,7 +84,7 @@ The ODBC Driver is a universal driver that will help connect our AWS DynamoDB Ta
 5. Click `Test Connection`. If the permission is setup properly, it should be connected
 ![alt text](<images/odbc3.png>)
 
-### 8. Connect to Power BI
+### 9. Connect to Power BI
 1. Download Power BI Desktop (online version doesn't support ODBC at this moment)
 2. `File` > `Get Data` > `Get Data to get Started` > `Other` > `ODBC`
 ![alt text](<images/bi1.png>)
