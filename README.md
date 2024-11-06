@@ -49,12 +49,12 @@ I used Python for this project
 1. I used PostMan to make sure my API URL is correct. Make sure to include `created_at_min` and `created_at_max` with the value format as ISO8061 on the `Params`
 ![alt text](<images/testing_postman1.png>)
 
-and `X-Shopify-Access-Token` where value is a API from `Step 2` on `Headers`
+2. and `X-Shopify-Access-Token` where value is a API from `Step 2` on `Headers`
 ![alt text](<images/testing_postman2.png>)
-2. Once the URL is working, I tested Lambda Function to make sure my logic also working
-3. Depends on how much orders within that day, Lambda can take up to a few minutes of runtime. I change my `Timeout` value to 5 min. This setting can be found under `Configuration` > `General configuration`.
+3. Once the URL is working, I tested Lambda Function to make sure my logic also working
+4. Depends on how much orders within that day, Lambda can take up to a few minutes of runtime. I change my `Timeout` value to 5 min. This setting can be found under `Configuration` > `General configuration`.
 ![alt text](<images/testing_timeout_config.png>)
-4. If everything works correctly, there should be some records in DynamoDB Table
+5. If everything works correctly, there should be some records in DynamoDB Table
 ![alt text](<images/testing_dynamodb.png>)
 
 ### 6. Create Scheduler
