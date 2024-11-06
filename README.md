@@ -65,6 +65,8 @@ I used Python for this project
 ![alt text](<images/scheduler2.png>)
 
 ### 7. Create IAM User for Amazon DynamoDB ODBC Driver
+The ODBC Driver is a universal driver that will help connect our AWS DynamoDB Table to Power BI. It will need a user with access into our AWS table.
+
 1. Navigate to `AWS IAM` > `Create user` > name it `DynamoDB-ODBC-driver`
 2. Select `Attach policies directly` > grant `AmazonDynamoDBFullAccess`
 ![alt text](<images/7-permission.png>)
