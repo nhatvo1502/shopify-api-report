@@ -46,8 +46,11 @@ I used Python for this project
 5. Assign layer created from `Step 4`
 
 ### 5. Testing
-1. I used PostMan to make sure my API URL is correct
-![alt text](<images/testing_postman.png>)
+1. I used PostMan to make sure my API URL is correct. Make sure to include `created_at_min` and `created_at_max` with the value format as ISO8061 on the `Params`
+![alt text](<images/testing_postman1.png>)
+
+and `X-Shopify-Access-Token` where value is a API from `Step 2` on `Headers`
+![alt text](<images/testing_postman2.png>)
 2. Once the URL is working, I tested Lambda Function to make sure my logic also working
 3. Depends on how much orders within that day, Lambda can take up to a few minutes of runtime. I change my `Timeout` value to 5 min. This setting can be found under `Configuration` > `General configuration`.
 ![alt text](<images/testing_timeout_config.png>)
@@ -76,5 +79,17 @@ I used Python for this project
 3. Download > Download trial
 ![alt text](<images/odbc2.png>)
 4. To Configure Data Source, use AWS Access Key and AWS Secret Key from `Step 7`
+5. Click `Test Connection`. If the permission is setup properly, it should be connected
+![alt text](<images/odbc3.png>)
 
 ### 8. Connect to Power BI
+1. Download Power BI Desktop (online version doesn't support ODBC at this moment)
+2. `File` > `Get Data` > `Get Data to get Started` > `Other` > `ODBC`
+![alt text](<images/bi1.png>)
+3. Leave it default `CDATA AmazonDynamoDB Source` > `OK`
+![alt text](<images/bi2.png>)
+4. Default for both admin and password for `CDATA AmazonDynamoDB Source` should be `admin`
+5. Expanding until the our table appears > select > `load`
+![alt text](<images/bi3.png>)
+6. After succesfully loading the dataset in, it's ready to be processed and visualized
+![alt text](<images/bi4.png>)
